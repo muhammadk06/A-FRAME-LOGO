@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>A frame LOGO</title>
+        <script src = "https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <a-scene  vr-mode-ui="enabled: false;" background="color: #24CAFF;"renderer="colorManagement: true;">
+            <a-entity animation="property: object3D.position.y; from: 5; to: 0; dur: 4000; easing: easeOutCubic">
+                <a-entity position="0 880 1290" rotation="-34 0 0">
+                  <a-entity id="camera" camera="near: 1000; far: 4000; fov: 2.2"></a-entity>
+                </a-entity>
+              </a-entity>
+              <a-entity id="logo" rotation="0 45 0">
+                <a-entity animation="property: object3D.scale.y; from: 0.0001; to: 1; delay: 200; dur: 1000; easing: easeOutCubic"
+        rotation="-20 0 0" position="0 0 10.75" scale="1 0.0001 1" event-set__loaded="visible: true; _delay: 300" visible="false"
+        >
+        <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0">
+            <a-entity
+            animation="property: object3D.scale.y; from: 0.0001; to: 1; delay: 800; dur: 800; easing: easeOutCubic"
+            rotation="-140 0 0" position="0 15 0" scale="1 0.0001 1">
+            <a-box width="12.49" depth=".1" height="30" color="yellow" position="0 15 -.52" shader="flat"></a-box>
+            <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"></a-box>
+          </a-entity>
+        </a-box>
+                </a-entity>
+                <a-entity animation="property: object3D.scale.y; from: 0.0001; to: 1; delay: 800; dur: 600; easing: easeOutCubic"
+                rotation="-90 0 0" position="0 8 7.5" scale="1 0.0001 1" event-set__loaded="visible: true; _delay: 500"
+                visible="false">
+                <a-box width="12.45" depth=".1" height="14" color="green" position="0 7 .52" shader="flat"></a-box>
+                <a-box width="12.5" depth="1" height="14" color="#EF2D5E" position="0 7 0"></a-box>
+              </a-entity>
+                </a-entity>
+                <a-box width = "10" height = "15" position ="2 -7 12" color = "white" rotation = "60 17 15"  opacity = ".5" animation = "property: position; to: 20 25 22; delay: 400; dur: 5920; loop: true; easing: easeInCirc"></a-box>
+        </a-scene>
+    </body>
+</html>
